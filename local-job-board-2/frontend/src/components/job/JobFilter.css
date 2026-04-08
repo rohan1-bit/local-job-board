@@ -1,0 +1,80 @@
+.job-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.job-filter__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.job-filter__search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
+.job-filter__input {
+  flex: 1;
+  padding-left: 40px !important;
+}
+.job-filter__location { width: 200px; }
+
+.job-filter__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.job-filter__categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.filter-chip {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.filter-chip:hover { border-color: var(--border-accent); color: var(--text-primary); }
+.filter-chip.active {
+  background: var(--accent-glow);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+.filter-chip--urgent { border-color: #ff4d4d44; color: #ff6b6b; }
+.filter-chip--urgent:hover { border-color: #ff4d4d; }
+.filter-chip--urgent.active { background: #ff4d4d22; border-color: #ff4d4d; color: #ff4d4d; font-weight: 600; }
+.job-filter__actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+
+.job-filter__advanced {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .job-filter__search { flex-wrap: wrap; }
+  .job-filter__location { width: 100%; }
+  .job-filter__bar { flex-direction: column; align-items: flex-start; }
+  .job-filter__advanced { grid-template-columns: 1fr; }
+}

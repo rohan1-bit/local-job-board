@@ -1,0 +1,13 @@
+.post-job-page { padding-top: 90px; padding-bottom: 60px; }
+.post-job__header { margin-bottom: 28px; }
+.post-job__layout { display: grid; grid-template-columns: 1fr 280px; gap: 24px; align-items: start; }
+.post-job__form { display: flex; flex-direction: column; gap: 20px; }
+.form-section-title { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+.form-stack { display: flex; flex-direction: column; gap: 18px; }
+.post-job__actions { display: flex; gap: 12px; }
+.post-job__tips { position: sticky; top: 90px; }
+.post-job__tips h3 { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+.post-job__tips ul { display: flex; flex-direction: column; gap: 10px; padding-left: 0; list-style: none; }
+.post-job__tips li { font-size: 13px; color: var(--text-secondary); padding-left: 20px; position: relative; line-height: 1.5; }
+.post-job__tips li::before { content: '→'; position: absolute; left: 0; color: var(--accent-primary); }
+@media (max-width: 768px) { .post-job__layout { grid-template-columns: 1fr; } .post-job__tips { position: static; } }

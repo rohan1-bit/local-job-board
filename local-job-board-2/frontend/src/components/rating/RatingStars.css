@@ -1,0 +1,8 @@
+.stars { display: inline-flex; align-items: center; gap: 2px; }
+.star { color: var(--bg-elevated); transition: var(--transition); font-size: 16px; }
+.star.filled { color: var(--accent-primary); }
+.star.interactive { cursor: pointer; }
+.star.interactive:hover { transform: scale(1.2); color: var(--accent-primary); }
+.stars--sm .star { font-size: 13px; }
+.stars--lg .star { font-size: 22px; }
+.stars__label { font-size: 13px; color: var(--text-secondary); margin-left: 6px; font-family: var(--font-mono); }
